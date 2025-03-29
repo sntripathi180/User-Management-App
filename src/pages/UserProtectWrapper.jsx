@@ -23,7 +23,7 @@ const UserProtectWrapper = ({children}) => {
 
     if(loading){
         return (
-            <div>Loading....</div>
+            <div className='flex justify-center items-center text-center'>Loading....</div>
         )
     }
   return (

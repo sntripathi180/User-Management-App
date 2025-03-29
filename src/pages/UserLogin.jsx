@@ -50,8 +50,8 @@ const UserLogin = () => {
         
     }
   return (
-    <div className='p-7 flex flex-col justify-between h-screen'>
-        <div>
+    <div className='p-7 flex justify-center items-center min-h-screen bg-[#eeeeee] px-4 '>
+        <div className='p-5 border-2 rounded-2xl max-w-sm sm:max-w-md  '>
             <form onSubmit={(e)=>handelSubmit(e)}>
                 <h3 className='text-lg font-medium mb-2'>
                     What's your email?

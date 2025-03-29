@@ -92,12 +92,13 @@ const handelDelete = async (id)=>{
 }
 
   return (
-    <div>
+    <div className='mx-auto max-w-2xl p-4'>
 
-        <h1 className='mb-4 text-2xl font-bold '>Users</h1>
+        <h1 className='mb-4 text-2xl text-center font-bold '>Users</h1>
         {message && <p className='text-green-700  mb-4'>{message}</p>}
 
-{loading ? (<p>Loading users ...Please wait</p>):( <div>
+{loading ? (<p>Loading users ...Please wait</p>):( 
+    <div className='grid md:grid-cols-1 grid-cols-1 gap-2'>
 {data.map((currElem) =>(
     <UserInfoCard 
      key={currElem.id} 
@@ -109,17 +110,20 @@ const handelDelete = async (id)=>{
 </div>)}
        
 
-{editUser && (<div ref={editUserRef}><EditUserInfoForm 
+{editUser && (<div className='mt-5 '
+ ref={editUserRef}><EditUserInfoForm 
 user = {editUser}
 onCancel  ={()=>setEditUser(null)}
 onSave = {handelUpdate}
 /></div>)}
 
+<div className='flex justify-center  mt-5'>
 <InfoPageControl
 currentPage = {presentPage}
 totalPage = {totalPage}
 onPageChange = {setPresentPage}
 />
+</div>
 
     </div>
   )

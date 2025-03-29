@@ -19,8 +19,8 @@ const EditUserInfoForm = ({user, onCancel,onSave}) => {
     onSave(formData);
   }
   return (
-    <div className='p-4 mt-4 border rounded'>
-      <h2 className='font-bold mb-4 text-xl'>Edit User</h2>
+    <div className='p-4 mt-4 border rounded max-w-lg mx-auto'>
+      <h2 className='font-bold mb-4 text-xl text-center'>Edit User</h2>
       <form onSubmit={handelSubmit} >
         <div className='mb-6'>
           <label className='mb-2 block '>First Name</label>
@@ -41,7 +41,7 @@ const EditUserInfoForm = ({user, onCancel,onSave}) => {
           value={formData.last_name}
           required
           onChange={handelChange}
-          className='w-full rounded px-3 border'
+          className='w-full rounded px-3 border '
           />
         </div>
         <div className='mb-6'>
